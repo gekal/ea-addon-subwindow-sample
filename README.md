@@ -1,12 +1,9 @@
 # ea_sample_subwindow
 
-set TlbFileName=$(ProjectName).tlb
-
+```
 rem ■■ DLLコピー ■■
 copy $(TargetFileName) "..\..\..\setup\$(TargetFileName)"
 copy $(TargetFileName) "C:\Program Files (x86)\SparxSystems Japan\EA\$(TargetFileName)"
-copy %TlbFileName% "..\..\..\setup\%TlbFileName%"
-copy %TlbFileName% "C:\Program Files (x86)\SparxSystems Japan\EA\%TlbFileName%"
 
 rem ■■ DLL登録 ■■
 cd "C:\Program Files (x86)\SparxSystems Japan\EA"
@@ -21,3 +18,4 @@ IF EXIST "%SystemRoot%\syswow64\reg.exe" (
  set RegExeFolder="%SystemRoot%\system32"
 )
 %RegExeFolder%\reg.exe add %RegistoryPath% /ve /f /d AddinMainWithWindow.AddinMain
+```
