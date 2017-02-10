@@ -1,5 +1,13 @@
 # ea_sample_subwindow
 
+-----------------------------------------------------------------------------------
+
+## 開発環境
+* Window10
+* Enterprise Architect 13.0
+* Visual Studio Commutity 2015
+
+## ビルド後イベントのコマンドライン
 ```
 rem ■■ DLLコピー ■■
 copy $(TargetFileName) "..\..\..\setup\$(TargetFileName)"
@@ -19,3 +27,8 @@ IF EXIST "%SystemRoot%\syswow64\reg.exe" (
 )
 %RegExeFolder%\reg.exe add %RegistoryPath% /ve /f /d AddinMainWithWindow.AddinMain
 ```
+
+## 操作確認
+1.[サブウィンドウ](http://www.sparxsystems.jp/help/13.0/custom_docked_window.htm)を表示
+ アドイン・拡張｜アドイン｜ウィンドウ
+![実行例](ea_sample_subwindow/pic/RunSample.PNG)
